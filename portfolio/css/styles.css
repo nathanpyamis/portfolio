@@ -1,0 +1,387 @@
+ :root {
+      --bg: #0f1216;
+      --panel: #141923;
+      --text: #e7edf5;
+      --muted: #9fb0c3;
+      --accent: #4da3ff; /* blue highlight */
+      --link: #cfe4ff;
+      --border: #1e2533;
+      --shadow: 0 8px 24px rgba(10, 12, 16, 0.6);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    aside {
+      background: var(--panel);
+      border-right: 1px solid var(--border);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Avatar container */
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent); /* use accent color for better contrast */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* subtle shadow for depth */
+  flex-shrink: 0; /* prevents shrinking in flex layouts */
+}
+
+/* Avatar image */
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ensures image fills without distortion */
+  object-position: center; /* keeps face centered */
+  display: block;
+  image-rendering: auto; /* keeps clarity */
+}
+
+
+    .identity {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .identity .name { font-weight: 700; letter-spacing: 0.2px; }
+    .identity .role { color: var(--muted); font-size: 0.95rem; }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: 160ms ease;
+    }
+    .nav-link:hover {
+      background: rgba(255,255,255,0.04);
+      border-color: var(--border);
+    }
+    .nav-link .icon {
+      width: 22px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .nav-link.active {
+      border-color: var(--accent);
+      background: rgba(77,163,255,0.08);
+    }
+
+/* Language */
+    .lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.lang a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.lang a:hover {
+  text-decoration: underline;
+}
+
+/* Active language highlight */
+.lang a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Dark mode defaults */
+:root {
+  --link-color: #cfe4ff;
+  --muted: #9fb0c3;
+  --border: #1e2533;
+  --accent: #4da3ff;
+}
+
+/* Light mode overrides */
+.light-mode {
+  --link-color: #0077cc;
+  --muted: #555555;
+  --border: #dddddd;
+  --accent: #0077cc;
+}
+
+
+    /* Main */
+    main {
+      padding: 40px 48px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px; /* space between buttons */
+}
+
+/* Work with me button (already styled as .cta) */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #061424;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(77,163,255,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(77,163,255,0.45);
+}
+
+/* Theme toggle button */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  color: var(--text);
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.toggle-btn:hover {
+  background: var(--accent);
+  color: #061424;
+}
+
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 36px;
+    }
+    .line {
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      color: var(--muted);
+      letter-spacing: 0.2px;
+    }
+    .line .index {
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .line .angle {
+      color: var(--angle-color);
+      font-weight: 600;
+    }
+    .line .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      body { grid-template-columns: 280px 1fr; }
+    }
+    @media (max-width: 860px) {
+      body { grid-template-columns: 1fr; }
+      aside {
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+      }
+      nav { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+      .lang { margin-top: 0; margin-left: auto; }
+      main { padding: 24px; }
+      .hero { margin-top: 24px; }
+    }
+
+    /*Projects CSS */
+
+    .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: #141923;
+  border: 1px solid #1e2533;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #e7edf5;
+}
+
+.card-content p {
+  color: #9fb0c3;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.card-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--accent);
+  color: #061424;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #66b5ff;
+}
+
+.btn.secondary {
+  background: #1e2533;
+  color: #e7edf5;
+}
+
+.btn.secondary:hover {
+  background: #2a3245;
+}
+/* Contact CSS */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #e7edf5;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+/* Dark Mode defaults */
+:root {
+  --bg: #0f1216;
+  --panel: #141923;
+  --text: #e7edf5;   /* white text */
+  --muted: #9fb0c3;
+  --accent: #4da3ff;
+  --border: #1e2533;
+  --angle-color: #e7edf5;   /* visible in dark mode */
+  --link-color: #cfe4ff;    /* link color in dark mode */
+}
+
+/* Light Mode overrides */
+.light-mode {
+  --bg: #f9f9f9;
+  --panel: #ffffff;
+  --text: #1a1a1a;   /* dark text */
+  --muted: #555555;
+  --accent: #0077cc;
+  --border: #dddddd;
+  --angle-color: #1a1a1a;   /* visible in light mode */
+  --link-color: #0077cc;    /* link color in light mode */
+}
+
+/* Angle styling */
+.line .angle {
+  color: var(--angle-color);
+  font-weight: 700;
+  font-family: monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, p, span {
+  color: var(--text);
+}
