@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nathaniel — Web Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <style>
+   
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <div class="brand">
+       <div class="avatar" aria-hidden="true">
+         <img src="images/propic.png" srcset="images/propic@2x.png 2x" alt="Profile photo" />
+
+       </div>
+
+  </div>
+
+
+    <nav aria-label="Primary">
+      <a class="nav-link active" href="#home">
+        <span class="icon"><i class="fa-solid fa-house"></i></span>
+        <span>Home</span>
+      </a>
+      <a class="nav-link" href="#projects">
+        <span class="icon"><i class="fa-solid fa-diagram-project"></i></span>
+        <span>Projects</span>
+      </a>
+      <a class="nav-link" href="#about">
+        <span class="icon"><i class="fa-solid fa-user"></i></span>
+        <span>About</span>
+      </a>
+    </nav>
+   <div class="lang" aria-label="Language">
+      <span>Language:</span>
+      <a href="#" data-lang="en" class="active">EN</a>
+      <span class="sep">/</span>
+      <a href="#" data-lang="pg">Tok Pisin</a>
+   </div>
+
+
+  </aside>
+
+  <!-- Main -->
+  <main>
+<div class="topbar">
+  <!-- Work with me button -->
+  <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <i class="fa-solid fa-handshake-simple"></i>
+    Work with me
+  </button>
+
+  <!-- Theme toggle button -->
+  <button id="toggle-theme" class="toggle-btn">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+    Toggle Theme
+  </button>
+</div>
+
+
+    <section id="home" class="hero" aria-label="Intro">
+<p class="line" data-en="Hello, I'm Nathaniel!" data-pg="Nem blo mi Nathan Yamis">
+  <span class="index">01</span>
+  <span class="angle">&lt;</span>
+  <span class="text">Hello, I'm Nathan Yamis</span>
+  <span class="angle">/&gt;</span>
+</p>
+
+<p class="line" data-en="I design and develop websites." data-pg="Mi save wokim na planim ol website.">
+  <span class="index">02</span>
+  <span class="angle">&lt;</span>
+  <span class="text">I design and develop websites.</span>
+  <span class="angle">/&gt;</span>
+</p>
+
+<p class="line" data-en="I also craft your brand image, logo, and identity." data-pg="Mi tu save wokim piksa, logo na nem bilong bisnis.">
+  <span class="index">03</span>
+  <span class="angle">&lt;</span>
+  <span class="text">I also craft your brand image, logo, and identity.</span>
+  <span class="angle">/&gt;</span>
+</p>
+
+    </section>
+
+    <!-- Example sections (optional anchors) -->
+ <section id="projects" style="margin-top:40px;">
+  <h2 style="margin:0 0 20px;">Featured Projects</h2>
+  
+  <div class="projects-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="images/sirromLOGO.jpg" alt="School Website Project" />
+      <div class="card-content">
+        <h3>Sirrom Consultants</h3>
+        <p>A responsive business website with modern UI, optimized images, and authentic content.</p>
+        <div class="card-links">
+          <a href="https://nathanpyamis.github.io/sirrom.github.io/" target="_blank" class="btn">GitHub Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <img src="images/kwilah_logo.jpg" alt="Business Services Platform" />
+      <div class="card-content">
+        <h3>Kwilah Online Solutions</h3>
+        <p>Business Consultation services platform built for Papua New Guinea SME.</p>
+        <div class="card-links">
+          <a href="https://kwilahltd.com/" target="_blank" class="btn">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <img src="images/PTUM.png" alt="University Branding Project" />
+      <div class="card-content">
+        <h3>Pacific Tech University of Morobe</h3>
+        <p>Branding and academic structuring with a professional web presence for PTUM.</p>
+        <div class="card-links">
+          <a href="https://sirromtech.github.io/ptum/" target="_blank" class="btn">GitHub Demo</a>
+        </div>
+      </div>
+    </div>
+        <div class="project-card">
+      <img src="images/web-app.png" alt="Business Services Platform" />
+      <div class="card-content">
+        <h3>Gerson Solulu Scholarship Program</h3>
+        <p>A scholarship platform built for Morobe Provincial Government. A web application </p>
+        <div class="card-links">
+          <a href="https://www.gersonsoluluscholarship.com/" target="_blank" class="btn">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+   <section id="about" style="margin-top:28px;">
+  <h2 style="margin:0 0 10px;" 
+      data-en="About" 
+      data-pg="Toktok long mi">
+    About
+  </h2>
+
+  <p class="about-text" 
+     data-en="I'm Nathaniel, a passionate web developer and problem solver who thrives on turning ideas into functional, visually engaging solutions. I love coding with Python for backend logic, and I bring designs to life using JavaScript, HTML, CSS, Bootstrap, and Tailwind. Beyond coding, I enjoy graphic editing—refining visuals to ensure clarity, precision, and professional impact." 
+     data-pg="Mi Nathaniel, mi gat strongpela laik long wokim ol website na painim rot long stretim ol hevi. Mi save yusim Python long wok bihainim sait, na mi save bringim ol design i kamap gutpela lukluk wantaim JavaScript, HTML, CSS, Bootstrap na Tailwind. Tu mi save wokim ol piksa na editim ol samting bilong luk klia na luk nais.">
+    I'm Nathaniel, a passionate web developer and problem solver who thrives on turning ideas into functional, visually engaging solutions. I love coding with Python for backend logic, and I bring designs to life using JavaScript, HTML, CSS, Bootstrap, and Tailwind. Beyond coding, I enjoy graphic editing—refining visuals to ensure clarity, precision, and professional impact.
+  </p>
+
+  <p class="about-text" 
+     data-en="What excites me most is solving real-world challenges—whether it's building responsive websites, optimizing user experiences, or crafting creative branding that empowers schools, businesses, and communities." 
+     data-pg="Samting mi laikim tru em long stretim ol hevi bilong realpla laip—olsem wokim responsive website, mekim ol yusaman i kisim gutpela eksperience, o wokim branding bilong skul, bisnis na komuniti.">
+    What excites me most is solving real-world challenges—whether it's building responsive websites, optimizing user experiences, or crafting creative branding that empowers schools, businesses, and communities.
+  </p>
+</section>
+
+
+      <section id="contact" style="margin-top:40px;">
+  <h2 style="margin:0 0 20px;">Contact</h2>
+  
+  <div class="contact-grid">
+    <!-- WhatsApp -->
+    <div class="contact-item">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp: <a href="https://wa.me/67579070847" target="_blank">79070847</a></span>
+    </div>
+
+    <!-- Facebook -->
+    <div class="contact-item">
+      <i class="fa-brands fa-facebook"></i>
+      <span>Facebook: <a href="https://www.facebook.com/nates.yamis.2025" target="_blank">Nathaniel Parasafa Yamis</a></span>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email: <a href="mailto:nathanpyamis@gmail.com">nathanpyamis@gmail.com</a></span>
+    </div>
+
+    <!-- YouTube -->
+    <div class="contact-item">
+      <i class="fa-brands fa-youtube"></i>
+      <span>YouTube: <a href="https://www.youtube.com/@nathanyamis" target="_blank">nathanyamis</a></span>
+    </div>
+  </div>
+</section>
+
+    </section>
+  </main>
+
+<script src="js/lang.js"></script>
+  <script>
+    // Optional: simple language toggle demo (static)
+    const langLinks = document.querySelectorAll('.lang a');
+    langLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = link.dataset.lang;
+        alert('Language switch demo: ' + lang.toUpperCase());
+      });
+    });
+  </script>
+</body>
+</html>
